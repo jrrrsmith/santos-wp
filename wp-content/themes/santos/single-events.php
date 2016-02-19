@@ -1,6 +1,6 @@
 <?php get_header();?>
 <?php
-$background = get_field( 'news_image' );
+$background = get_field( 'event_image' );
 $background_style = $background ? "background-image:  linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0, 0, 0, 1) 100%)
    ,  url($background)" : '';
 ?>

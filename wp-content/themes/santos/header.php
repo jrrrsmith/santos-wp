@@ -38,7 +38,7 @@
 		</svg>
 		<header>
 			<div class="header-inner">
-				<a href="http://test.scientificmaps.com">
+				<a href="<?php bloginfo('url');?>">
 					<img src="<?php bloginfo('template_url');?>/images/header2.png" />
 				</a>
 				<?php wp_nav_menu( array( 
