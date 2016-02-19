@@ -1,0 +1,72 @@
+.flyer-container{
+	padding: 30px 20px;
+	.title-wrap{
+		text-align: center;
+	}
+	h2{
+		color: white;
+		font-family: $copy;
+		font-weight: 300;
+		font-size: 28px;
+		display: inline-block;
+		border-bottom: 1px solid white;
+		text-transform: uppercase;
+		a{
+			color: inherit;
+			text-decoration: none;
+			-o-transition:.3s;
+		  -ms-transition:.3s;
+		  -moz-transition:.3s;
+		  -webkit-transition:.3s;
+		  /* ...and now for the proper property */
+		  transition:.3s;
+		}
+	}
+	ul{
+		padding: 0;
+		margin: 0;
+		//float: left;
+		min-height: 350px;
+		//background-color: black;
+		li{
+			display: inline-block;
+			@include span-columns(4);
+			@include omega(3n);
+			height: 100%;
+			position: relative;
+			margin-bottom: 50px;
+			max-height: 278px;
+			.overlay{
+				position: absolute;
+				text-align: center;
+				width: 100%;
+				font-family: $santos-font;
+				text-transform: uppercase;
+			}
+			.overlay-inner{
+				padding: 15% 11% 0;
+				h3{
+					margin: 0 0 10px;
+					font-size: 32px;
+				}
+				span{
+					display: block;
+					font-size: 22px;
+				}
+				.date{
+					margin-top: 10px;
+					font-size: 24px;
+				}
+			}
+			img{
+				width: 100%;
+			}
+			.back{
+				text-align: center;
+				img{
+					width: 85%;
+				}
+			}
+		}
+	}
+}

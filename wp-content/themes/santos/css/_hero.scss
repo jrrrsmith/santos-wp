@@ -1,0 +1,88 @@
+.hero-1{
+	background: url('../images/calvin.png');
+	background-size: cover;
+	background-position: 0% 50%;
+	background-repeat: no-repeat;
+}
+
+.hero-2{
+	background: url('../images/slash.jpg');
+	background-position: 0% 84%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.hero-3{
+	background: url('../images/ab.png');
+	background-size: cover;
+	background-position: 0% 50%;
+	background-repeat: no-repeat;
+	// .hero-inner .content{
+	// 	float: right;
+	// 	text-align: right;
+	// }
+}
+
+.hero-section{
+	// background: url('../images/calvin.png');
+	// background-size: cover;
+	// background-position: 0% 50%;
+	// background-repeat: no-repeat;
+	height: 400px;
+	display: table;
+	width: 100%;
+	padding-bottom: 40px;
+}
+
+.hero-inner{
+	display: table-cell;
+	vertical-align: bottom;
+	font-family: $copy;
+	.content{
+		float: left;
+		margin: 0 20px;
+		max-width: 50%;
+		.title-wrap{
+			background-color: rgba(0,0,0,0.8);
+			color: white;
+			padding: 1rem;
+			margin-bottom: 6px;
+			h2, p{
+				margin: 0;
+			}
+			h2{
+				font-size: 28px;
+			}
+			p{
+				padding-top: 10px;
+			}
+		}
+		a{
+			text-decoration: none;
+			color: white;
+			text-transform: uppercase;
+			background-color: black;
+			font-size: 12px;
+			padding: 10px 15px;
+			-o-transition:.3s;
+		  -ms-transition:.3s;
+		  -moz-transition:.3s;
+		  -webkit-transition:.3s;
+		  /* ...and now for the proper property */
+		  transition:.3s;
+			&:hover{
+				background-color: white;
+				color: black;
+			}
+		}
+	}
+}
+
+.owl-theme .owl-controls {
+  margin-top: -28px;
+  position: relative;
+}
+.owl-theme .owl-controls .owl-page span {
+	background: white;
+	border: 1px solid #444444;
+}

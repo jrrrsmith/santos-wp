@@ -1,0 +1,157 @@
+.vertical-tabs-container {
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-background-color: white !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $action-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $medium-screen: em(640) !default;
+  $base-font-color: $dark-gray !default;
+  $tab-border-color: black;
+  $tab-border: 1px solid $tab-border-color;
+  $tab-border-radius: $base-border-radius;
+  $tab-content-background: white;
+  $tab-active-color: $tab-content-background;
+  $tab-inactive-color: $base-background-color;
+  $vertical-tabs-height: em(300);
+  $vertical-tab-mode: $medium-screen;
+  font-family: $copy;
+
+  @include clearfix;
+  //border-radius: $tab-border-radius;
+  //border: $tab-border;
+  margin-bottom: $base-spacing;
+  //overflow: hidden;
+
+  height: 100%;
+  position: relative;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: $action-color;
+    text-decoration: none;
+  }
+
+  .vertical-tabs {
+    display: none;
+
+    @include media($vertical-tab-mode) {
+      background-color: black;
+      display: inline;
+      float: left;
+      height: auto;
+      border-right: 1px solid white;
+      border-left: 1px solid white;
+      //border-bottom: 1px solid black;
+      //border-top: 1px solid black;
+      width: 20%;
+      position: fixed;
+      max-width: 217px;
+      //margin-top: 100px;
+    }
+  }
+
+  .vertical-tab {
+    @include media($vertical-tab-mode) {
+      border-bottom: 1px solid white;
+      display: block;
+      font-weight: bold;
+      //margin-right: -1px;
+      padding: ($base-spacing / 2) ($gutter / 2);
+      &:hover{
+        background-color: #666;
+        color: white;
+      }
+
+      &.is-active {
+        background-color: #666;
+        color: white;
+        //margin-right: -1px;
+      }
+    }
+  }
+
+  a.vertical-tab-accordion-heading,
+  a.vertical-tab {
+    color: white;
+  }
+
+  .vertical-tab:focus {
+    outline: none; 
+  }
+
+  .vertical-tab-content-container {
+    display: block;
+    margin: 0 auto;
+
+    & a:focus { 
+      outline: none; 
+    }
+
+    @include media($vertical-tab-mode) {
+      @include size(80% $vertical-tabs-height);
+      background-color: black;
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      min-height: 1000px;
+    }
+    //height: 100%;
+  }
+
+  .vertical-tab-content {
+    background-color: black;
+    padding: 0; //$gutter;
+
+    p {
+      color: white;
+      line-height: $base-line-height;
+      margin-top: .75em;
+      padding: 0 20px;
+    }
+
+    @include media($vertical-tab-mode) {
+      border: none;
+      display: none;
+    }
+  }
+
+  .vertical-tab-accordion-heading {
+    background-color: $tab-inactive-color;
+    border-top: $tab-border;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    padding: $base-spacing / 2 $gutter / 2;
+
+    &:focus,
+    &:hover {
+      color: $action-color;
+    }
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &.is-active {
+      background: $tab-active-color;
+      border-bottom: none;
+    }
+
+    @include media($vertical-tab-mode) {
+      display: none;
+    }
+  }
+  .vertical-tab{
+    text-transform: uppercase;
+    font-family: $copy;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+}
+
+// Based on code by Jett Miller jettmiller.net
