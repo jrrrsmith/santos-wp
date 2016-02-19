@@ -1,0 +1,23 @@
+hero temp
+
+<div class="hero-section">
+				<div class="hero-inner">
+					<div class="wrap">
+						<div class="content">
+							<div class="title-wrap">
+								<h2>DJ Calvin Harris</h2>
+								<p>Calvin came by and DJ'ed for everybody for a couple hours and people were into it.</p>
+							</div> <!-- END OF TITLE WRAP -->
+							<a href="#">Gallery</a>
+						</div> <!-- END OF CONTENT -->
+					</div> <!-- END OF WRAP -->
+				</div> <!-- END OF HERO INNER -->
+			</div> <!-- END OF HERO SECTION -->
+
+
+
+			<div id="owl-demo" class="owl-carousel owl-theme">
+			  <div class="item"><img src="images/slash.jpg" ></div>
+			  <div class="item"><img src="images/calvin.png" ></div>
+			  <div class="item"><img src="images/ab.png" ></div>
+			</div>
