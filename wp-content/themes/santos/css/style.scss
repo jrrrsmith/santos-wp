@@ -1,0 +1,78 @@
+//VARIABLES
+
+$bg-color: white;
+$flyer-orange: #f8750b;
+$red: #e71f29;
+$santos-font: Impact, Charcoal, sans-serif;
+$copy: 'Droid Sans', sans-serif;
+$header-height: 60px;
+
+//STYLESHEETS
+
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "header";
+@import "footer";
+@import "tabs";
+@import "feeds";
+@import "hero";
+@import "flyer";
+@import "parallax";
+@import "map";
+
+@import "venue";
+@import "news";
+@import "gallery";
+@import "contact";
+@import "events";
+
+
+body{
+	background-color: black;
+}
+
+a,
+a:focus,
+a:hover,
+a:visited{
+  outline: 0;
+}
+
+
+#body{
+	margin-top: $header-height;
+	//min-height: 1000px;
+	background-color: black;
+	margin-bottom: 40px;
+}
+.wrap{
+	max-width: 1330px;
+	margin: 0 auto;
+}
+
+.main{
+	@include outer-container;
+	//border: 1px solid black;
+	font-family: $copy;
+	border-top: 0;
+	height: 100%;
+	padding-bottom: 50px;
+}
+
+.clear:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}

@@ -44,7 +44,7 @@ get_header();
 					<span class="events__item__subinfo"><?php the_field('age_limit'); ?> | <?php the_field('event_location'); ?> | <?php the_field('event_date'); ?></span>
 					<?php the_field('short_description'); ?>
 					<a class="events__item__more button" href="<?php the_permalink(); ?>">Read More</a>
-					<a class="events__item__tickets button" href="http://www.ticketmaster.com">Tickets</a>
+					<a class="events__item__tickets button <?php the_field('tickets_available'); ?>" href="<?php the_field('tickets_link'); ?>">Tickets</a>
 				</div>
 			</li>
 			<?php endforeach; ?>
